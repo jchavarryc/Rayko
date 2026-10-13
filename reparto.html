@@ -34,3 +34,40 @@
         </ul>
         </nav>
       </aside>
+ <section>
+        <h1>Panel de reparto</h1>
+        <br>
+        <form class="formulario" action="#" method="post">
+          <fieldset>
+            <legend>Confirmar entrega</legend>
+            <div class="fila">
+              <div class="campo">
+                <label for="cod">Código de producto</label>
+                <input type="text" id="cod" name="cod" placeholder="CP-10231" required>
+              </div>
+              <div class="campo">
+                <label for="est">Nuevo estado</label>
+                <select id="est" name="est"><option>Entregado</option></select>
+              </div>
+            </div>
+            <button class="boton morado" type="submit">Actualizar</button>
+          </fieldset>
+        </form>
+        <div class="tabla">
+          <table>
+            <caption>Pedidos asignados a mi ruta</caption>
+            <thead>
+              <tr><th>Código</th><th>Cliente</th><th>Distrito</th><th>Estado</th></tr>
+            </thead>
+            <tbody>
+            <tr><td>CP-10232</td><td>Lucía Torres</td><td>San Borja</td><td><span class="estado ruta">En ruta</span></td></tr>
+            <tr><td>CP-10235</td><td>Pedro Salas</td><td>Barranco</td><td><span class="estado ruta">En ruta</span></td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td colspan="3">Total de pedidos</td><td>2</td></tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>     
