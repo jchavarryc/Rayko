@@ -21,5 +21,75 @@
       </nav>
     </div>
   </header>
+   <section class="hero">
+    <div class="contenedor">
+      <div>
+        <h1>Rápido como el Rayo</h1>
+        <p>Ingresa tu código de producto y mira si está en almacén, en ruta o ya fue entregado.</p>
+        <form class="buscador" action="seguimiento.html" method="get">
+          <input type="text" name="codigo" placeholder="Ej: CP-10231" required>
+          <button class="boton" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Rastrear</button>
+        </form>
+      </div>
+      <picture>
+        <source media="(max-width: 600px)" srcset="img/paquete">
+        <img src="img/hero.png" alt="Camión de Rayko Courier" width="480" height="340">
+      </picture>
+    </div>
+  </section>
+
+  <main>
+    <div class="contenedor">
+      <section>
+        <h2 class="centro">¿Cómo funciona?</h2>
+        <div class="tarjetas">
+          <article class="tarjeta almacen">
+            <div class="icono"><i class="fa-solid fa-warehouse"></i></div>
+            <h3>1. En almacén</h3>
+            <p>Tu producto fue recibido y está siendo preparado por el área de despacho.</p>
+          </article>
+          <article class="tarjeta ruta">
+            <div class="icono"><i class="fa-solid fa-truck-fast"></i></div>
+            <h3>2. En ruta</h3>
+            <p>El repartidor ya salió con tu pedido y va camino a tu dirección.</p>
+          </article>
+          <article class="tarjeta entregado">
+            <div class="icono"><i class="fa-solid fa-circle-check"></i></div>
+            <h3>3. Entregado</h3>
+            <p>El repartidor confirma la entrega y la empresa queda informada.</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="centro">Garantía y seguridad</h2>
+        <div class="tarjetas">
+          <article class="tarjeta">
+            <div class="icono"><i class="fa-solid fa-lock"></i></div>
+            <h3>Envíos protegidos</h3>
+            <p>Cada paquete se registra con un código único desde que entra al almacén.</p>
+          </article>
+          <article class="tarjeta">
+            <div class="icono"><i class="fa-solid fa-bolt"></i></div>
+            <h3>Entregas rápidas</h3>
+            <p>Rutas organizadas para que tu pedido llegue en el menor tiempo posible.</p>
+          </article>
+          <article class="tarjeta">
+            <div class="icono"><i class="fa-solid fa-medal"></i></div>
+            <h3>Garantía de entrega</h3>
+            <p>Si algo sale mal con tu envío, te acompañamos hasta resolverlo.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="centro">
+        <h2>Acceso para el personal</h2>
+        <p>Despachador, repartidor y administrador ingresan desde aquí.</p>
+        <br>
+        <a class="boton morado" href="login.html">Ingresar al sistema</a>
+      </section>
+    </div>
+  </main>
+
 </body>
 </html>
