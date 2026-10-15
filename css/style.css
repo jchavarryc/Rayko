@@ -15,3 +15,48 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+main {
+  flex: 1;
+  padding: 30px 0;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 20px;
+  height: auto;
+}
+
+h1, h2, h3 {
+  color: #2A1052;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+a {
+  color: #5B21B6;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.centro {
+  text-align: center;
+}
+
+/* ---------- Header y menú ---------- */
+header {
+  background-color: #2A1052;
+  padding: 15px 0;
+}
+
+/* FLEXBOX: logo a la izquierda y menú a la derecha */
+header .contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
