@@ -141,7 +141,7 @@ nav a.activo {
   flex: 1;
 }
 
-input, select {
+input, select, input[type="date"] {
   padding: 10px;
   border: 2px solid #DDD6FE;
   border-radius: 8px;
@@ -149,7 +149,7 @@ input, select {
   font-family: inherit;
 }
 
-input:focus, select:focus {
+input:focus, select:focus, input[type="date"]:focus {
   border-color: #7C3AED;
   outline: none;
 }
@@ -179,6 +179,10 @@ label {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
+  margin-bottom: 15px;
+}
+.fila.fila-unica {
+  grid-template-columns: 1fr;
 }
 
 fieldset {

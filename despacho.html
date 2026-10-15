@@ -41,10 +41,16 @@
         <form class="formulario" action="#" method="post">
           <fieldset>
             <legend>Registro de pedidos despachados</legend>
+            <div class="fila fila-unica">
+              <div class="campo">
+              <label for="cod">Código de pedido</label>
+              <input type="text" id="cod" name="cod" placeholder="CP-10231" required>
+              </div>
+            </div>
             <div class="fila">
               <div class="campo">
-                <label for="cod">Código de pedido</label>
-                <input type="text" id="cod" name="cod" placeholder="CP-10231" required>
+                <label for="fec">Fecha de estado</label>
+                <input type="date" id="fec" name="fec" required>
               </div>
               <div class="campo">
                 <label for="est">Estado del pedido</label>
@@ -58,16 +64,18 @@
           <table>
             <caption>Pedidos en gestión</caption>
             <thead>
-              <tr><th>Código</th><th>Cliente</th><th>Distrito</th><th>Estado</th></tr>
+              <tr><th>Código</th><th>Cliente</th><th>Distrito</th><th>Estado</th><th>Fecha de estado</th></tr>
             </thead>
             <tbody>
-            <tr><td>CP-10231</td><td>Carlos Mendoza</td><td>Miraflores</td><td><span class="estado almacen">En almacén</span></td></tr>
-            <tr><td>CP-10232</td><td>Lucía Torres</td><td>San Borja</td><td><span class="estado ruta">En ruta</span></td></tr>
-            <tr><td>CP-10233</td><td>Jorge Ramos</td><td>Surco</td><td><span class="estado entregado">Entregado</span></td></tr>
-            <tr><td>CP-10234</td><td>Ana Quispe</td><td>La Molina</td><td><span class="estado almacen">En almacén</span></td></tr>
+            <tr><td>CP-10231</td><td>Carlos Mendoza</td><td>Miraflores</td><td><span class="estado almacen">En almacén</span></td><td>10/10/2026</td></tr>
+            <tr><td>CP-10232</td><td>Lucía Torres</td><td>San Borja</td><td><span class="estado ruta">En ruta</span></td><td>13/10/2026</td></tr>
+            <tr><td>CP-10233</td><td>Jorge Ramos</td><td>Surco</td><td><span class="estado entregado">Entregado</span></td><td>12/10/2026</td></tr>
+            <tr><td>CP-10234</td><td>Ana Quispe</td><td>La Molina</td><td><span class="estado almacen">En almacén</span></td><td>10/10/2026</td></tr>
+            <tr><td>CP-10235</td><td>Pedro Salas</td><td>Barranco</td><td><span class="estado ruta">En ruta</span></td><td>13/10/2026</td></tr>
+
             </tbody>
             <tfoot>
-              <tr><td colspan="3">Total de pedidos</td><td>4</td></tr>
+              <tr><td colspan="4">Total de pedidos</td><td>5</td></tr>
             </tfoot>
           </table>
         </div>
