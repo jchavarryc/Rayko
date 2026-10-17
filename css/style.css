@@ -244,8 +244,8 @@ legend {
   transform: translateY(-5px);
 }
 
-.tarjeta.almacen   { border-top-color: #F59E0B; }
-.tarjeta.ruta      { border-top-color: #0EA5E9; }
+.tarjeta.almacen   { border-top-color: #FFFFFF; }
+.tarjeta.ruta      { border-top-color: blue; }
 .tarjeta.entregado { border-top-color: red; }
 
 .icono {
