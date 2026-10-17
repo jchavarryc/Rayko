@@ -246,7 +246,7 @@ legend {
 
 .tarjeta.almacen   { border-top-color: #F59E0B; }
 .tarjeta.ruta      { border-top-color: #0EA5E9; }
-.tarjeta.entregado { border-top-color: #10B981; }
+.tarjeta.entregado { border-top-color: red; }
 
 .icono {
   font-size: 28px;
