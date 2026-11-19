@@ -347,3 +347,90 @@ tfoot {
   color: white;
   font-weight: bold;
 }
+/* ---------- Botón de modo oscuro ---------- */
+.btn-tema {
+  background: transparent;
+  color: #DDD6FE;
+  border: 2px solid #7C3AED;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-tema:hover {
+  background-color: #7C3AED;
+  color: white;
+}
+/* ---------- Modo oscuro ---------- */
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.oscuro {
+  background-color: #14101F;
+  color: #EDE9FE;
+  color-scheme: dark;
+}
+
+body.oscuro h1,
+body.oscuro h2,
+body.oscuro h3 {
+  color: #DDD6FE;
+}
+
+body.oscuro main a:not(.boton) {
+  color: #C4B5FD;
+}
+
+body.oscuro header {
+  background-color: #1E0A3C;
+}
+
+body.oscuro .hero {
+  background-color: #3B1480;
+}
+
+body.oscuro .tarjeta,
+body.oscuro .formulario,
+body.oscuro .tabla {
+  background-color: #211A33;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.oscuro input,
+body.oscuro select {
+  background-color: #2A2140;
+  color: #EDE9FE;
+  border-color: #4C3A7A;
+}
+
+body.oscuro fieldset {
+  border-color: #4C3A7A;
+}
+
+body.oscuro legend,
+body.oscuro .numero {
+  color: #C4B5FD;
+}
+
+body.oscuro .icono {
+  color: #A78BFA;
+}
+
+body.oscuro tbody tr:nth-child(even) {
+  background-color: #2A2140;
+}
+
+body.oscuro tbody tr:hover {
+  background-color: #3B2D5E;
+}
+
+body.oscuro .linea li.hecho {
+  color: #C4B5FD;
+}
+
+body.oscuro footer {
+  background-color: #1E0A3C;
+}
