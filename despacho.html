@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de despacho | Rayko Courier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/Style.css">
+</head>
+<body>
+  <header>
+    <div class="contenedor">
+      <a class="logo" href="index.html"><i class="fa-solid fa-shield-halved"></i> Rayko Express</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="seguimiento.html">Seguimiento</a></li>
+          <li><a href="login.html">Ingresar</a></li>
+           <li><button class="btn-tema" id="btnTema" type="button" onclick="cambiarTema()"></button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="contenedor panel">
+      <aside class="menu-lateral">
+        <h2><i class="fa-solid fa-boxes-packing"></i> Despachador</h2>
+        <nav>
+          <ul>
+            <li><a href="despacho.html">Despacho</a></li>
+            <li><a href="reparto.html">Reparto</a></li>
+            <li><a href="admin.html">Administrador</a></li>
+            <li><a href="login.html">Cerrar sesión</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <section>
+        <h1>Panel de despacho</h1>
+        <br>
+        <form class="formulario" action="#" method="post">
+          <fieldset>
+            <legend>Registro de pedidos despachados</legend>
+            <div class="fila fila-unica">
+              <div class="campo">
+              <label for="cod">Código de pedido</label>
+              <input type="text" id="cod" name="cod" placeholder="CP-10231" required>
+              </div>
+            </div>
+            <div class="fila">
+              <div class="campo">
+                <label for="fec">Fecha de estado</label>
+                <input type="date" id="fec" name="fec" required>
+              </div>
+              <div class="campo">
+                <label for="est">Estado del pedido</label>
+                <select id="est" name="est"><option>En almacén</option><option>En ruta</option></select>
+              </div>
+            </div>
+            <button class="boton morado" type="submit">Actualizar</button>
+          </fieldset>
+        </form>
+        <div class="tabla">
+          <table>
+            <caption>Pedidos en gestión</caption>
+            <thead>
+              <tr><th>Código</th><th>Cliente</th><th>Distrito</th><th>Estado</th><th>Fecha de estado</th></tr>
+            </thead>
+            <tbody>
+            <tr><td>CP-10231</td><td>Carlos Mendoza</td><td>Miraflores</td><td><span class="estado almacen">En almacén</span></td><td>10/10/2026</td></tr>
+            <tr><td>CP-10232</td><td>Lucía Torres</td><td>San Borja</td><td><span class="estado ruta">En ruta</span></td><td>13/10/2026</td></tr>
+            <tr><td>CP-10233</td><td>Jorge Ramos</td><td>Surco</td><td><span class="estado entregado">Entregado</span></td><td>12/10/2026</td></tr>
+            <tr><td>CP-10234</td><td>Ana Quispe</td><td>La Molina</td><td><span class="estado almacen">En almacén</span></td><td>10/10/2026</td></tr>
+            <tr><td>CP-10235</td><td>Pedro Salas</td><td>Barranco</td><td><span class="estado ruta">En ruta</span></td><td>13/10/2026</td></tr>
+
+            </tbody>
+            <tfoot>
+              <tr><td colspan="4">Total de pedidos</td><td>5</td></tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="contenedor">
+      <p>&copy; 2026 Rayko Courier · Proyecto académico UTP</p>
+      <p><i class="fa-solid fa-phone"></i> (01) 600-0000 · <a href="mailto:atencion@Rayko.pe">atencion@raykocourier.pe</a></p>
+    </div>
+  </footer>
+     <script src="js/script.js"></script>
+</body>
+</html>
