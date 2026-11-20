@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de reparto | Rayko Courier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/Style.css">
+</head>
+<body>
+  <header>
+    <div class="contenedor">
+      <a class="logo" href="index.html"><i class="fa-solid fa-shield-halved"></i> Rayko Courier</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="seguimiento.html">Seguimiento</a></li>
+          <li><a href="login.html">Ingresar</a></li>
+           <li><button class="btn-tema" id="btnTema" type="button" onclick="cambiarTema()"></button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+ <main>
+    <div class="contenedor panel">
+      <aside class="menu-lateral">
+        <h2><i class="fa-solid fa-motorcycle"></i> Repartidor</h2>
+        <nav>
+        <ul>
+        <li><a href="despacho.html">Despacho</a></li>
+        <li><a href="reparto.html">Reparto</a></li>
+        <li><a href="admin.html">Administrador</a></li>
+        <li><a href="login.html">Cerrar sesión</a></li>
+        </ul>
+        </nav>
+      </aside>
+ <section>
+        <h1>Panel de reparto</h1>
+        <br>
+        <form class="formulario" action="#" method="post">
+          <fieldset>
+            <legend>Confirmar entrega</legend>
+            <div class="fila">
+              <div class="campo">
+                <label for="cod">Código de producto</label>
+                <input type="text" id="cod" name="cod" placeholder="CP-10231" required>
+              </div>
+              <div class="campo">
+                <label for="est">Nuevo estado</label>
+                <select id="est" name="est"><option>Entregado</option></select>
+              </div>
+            </div>
+            <button class="boton morado" type="submit">Actualizar</button>
+          </fieldset>
+        </form>
+        <div class="tabla">
+          <table>
+            <caption>Pedidos asignados a mi ruta</caption>
+            <thead>
+              <tr><th>Código</th><th>Cliente</th><th>Distrito</th><th>Estado</th></tr>
+            </thead>
+            <tbody>
+            <tr><td>CP-10232</td><td>Lucía Torres</td><td>San Borja</td><td><span class="estado ruta">En ruta</span></td></tr>
+            <tr><td>CP-10235</td><td>Pedro Salas</td><td>Barranco</td><td><span class="estado ruta">En ruta</span></td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td colspan="3">Total de pedidos</td><td>2</td></tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>     
+    <footer>
+    <div class="contenedor">
+      <p>&copy; 2026 Rayko Courier · Proyecto académico UTP</p>
+      <p><i class="fa-solid fa-phone"></i> (01) 600-0000 · <a href="mailto:atencion@chaskipukara.pe">atencion@chaskipukara.pe</a></p>
+    </div>
+  </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
