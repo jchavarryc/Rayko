@@ -1,1 +1,28 @@
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Administrador | Rayko Courier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="contenedor">
+      <a class="logo" href="index.html"><i class="fa-solid fa-shield-halved"></i> Rayko Courier</a>
+      <button class="btn-hamburguesa" id="btnMenu" type="button" onclick="toggleMenu()" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav id="navPrincipal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="seguimiento.html">Seguimiento</a></li>
+          <li><a href="login.html">Ingresar</a></li>
+          <li><button class="btn-tema" type="button" onclick="abrirModalCotizador()"><i class="fa-solid fa-calculator"></i> Cotizar</button></li>
+          <li><button class="btn-tema" id="btnTema" type="button" onclick="cambiarTema()"></button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
