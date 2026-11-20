@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de reparto | Rayko Courier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="contenedor">
+      <a class="logo" href="index.html"><i class="fa-solid fa-shield-halved"></i> Rayko Courier</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="seguimiento.html">Seguimiento</a></li>
+          <li><a href="login.html">Ingresar</a></li>
+           <li><button class="btn-tema" id="btnTema" type="button" onclick="cambiarTema()"></button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+   <main>
+    <div class="contenedor">
+      <h1>Seguimiento de producto</h1>
+      <p>Así verá el cliente cada estado de su envío.</p>
+      <br>
+      <form class="buscador" action="seguimiento.html" method="get">
+        <input type="text" name="codigo" placeholder="Ej: CP-10231" required>
+        <button class="boton morado" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+      </form>
+            <br>
+      <div class="tarjetas">
+        <article class="tarjeta almacen">
+          <h3>Código CP-10231</h3>
+          <span class="estado almacen">En almacén</span>
+          <ol class="linea">
+            <li class="hecho actual"><i class="fa-solid fa-warehouse"></i><br>En almacén</li>
+            <li class=""><i class="fa-solid fa-truck-fast"></i><br>En ruta</li>
+            <li class=""><i class="fa-solid fa-circle-check"></i><br>Entregado</li>
+          </ol>
+          <p><strong>Producto:</strong> Audífonos Bluetooth</p>
+          <p><strong>Destino:</strong> Miraflores, Lima</p>
+          <p><strong>Actualizado:</strong> 10/10/2026 - 08:30</p>
+        </article>
+                <article class="tarjeta ruta">
+          <h3>Código CP-10232</h3>
+          <span class="estado ruta">En ruta</span>
+          <ol class="linea">
+            <li class="hecho"><i class="fa-solid fa-warehouse"></i><br>En almacén</li>
+            <li class="hecho actual"><i class="fa-solid fa-truck-fast"></i><br>En ruta</li>
+            <li class=""><i class="fa-solid fa-circle-check"></i><br>Entregado</li>
+          </ol>
+          <p><strong>Producto:</strong> Zapatillas running</p>
+          <p><strong>Destino:</strong> San Borja, Lima</p>
+          <p><strong>Actualizado:</strong> 10/10/2026 - 10:15</p>
+        </article>
+        <article class="tarjeta entregado">
+          <h3>Código CP-10233</h3>
+          <span class="estado entregado">Entregado</span>
+          <ol class="linea">
+            <li class="hecho"><i class="fa-solid fa-warehouse"></i><br>En almacén</li>
+            <li class="hecho"><i class="fa-solid fa-truck-fast"></i><br>En ruta</li>
+            <li class="hecho actual"><i class="fa-solid fa-circle-check"></i><br>Entregado</li>
+          </ol>
+          <p><strong>Producto:</strong> Cafetera eléctrica</p>
+          <p><strong>Destino:</strong> Surco, Lima</p>
+          <p><strong>Actualizado:</strong> 10/10/2026 - 12:40</p>
+        </article>
+    </div>
+    </div>
+  </main>
+  <footer>
+    <div class="contenedor">
+      <p>&copy; 2026 Rayko Courier · Proyecto académico UTP</p>
+      <p><i class="fa-solid fa-phone"></i> (01) 600-0000 · <a href="mailto:atencion@chaskipukara.pe">atencion@chaskipukara.pe</a></p>
+    </div>
+  </footer>
+     <script src="js/script.js"></script>
+  </body>
+</html>
