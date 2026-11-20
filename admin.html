@@ -26,3 +26,74 @@
       </nav>
     </div>
   </header>
+<main>
+    <div class="contenedor panel">
+      <aside class="menu-lateral">
+        <h2><i class="fa-solid fa-user-shield"></i> Admin</h2>
+        <nav>
+          <ul>
+            <li><a href="despacho.html">Despacho</a></li>
+            <li><a href="reparto.html">Reparto</a></li>
+            <li><a href="admin.html" class="activo">Administrador</a></li>
+            <li><a href="login.html">Cerrar sesión</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <section>
+        <h1>Resumen Operativo General</h1>
+        <br>
+        <div class="tarjetas" id="resumenKPI">
+          <article class="tarjeta almacen">
+            <h3>En almacén</h3>
+            <p class="numero" id="kpiAlmacen">0</p>
+          </article>
+          <article class="tarjeta ruta">
+            <h3>En ruta</h3>
+            <p class="numero" id="kpiRuta">0</p>
+          </article>
+          <article class="tarjeta entregado">
+            <h3>Entregados</h3>
+            <p class="numero" id="kpiEntregado">0</p>
+          </article>
+        </div>
+
+        <div style="margin-bottom: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
+          <button class="boton morado" type="button" onclick="registrarPedidoPrompt()"><i class="fa-solid fa-plus"></i> Nuevo pedido (Prompt)</button>
+          <button class="boton" type="button" onclick="reiniciarDatosDemo()"><i class="fa-solid fa-rotate-left"></i> Restaurar datos base</button>
+        </div>
+
+        <div class="tabla">
+          <table>
+            <caption>Control maestro de todos los pedidos</caption>
+            <thead>
+              <tr><th>Código</th><th>Cliente</th><th>Producto</th><th>Distrito</th><th>Estado</th><th>Fecha</th><th>Acción</th></tr>
+            </thead>
+            <tbody id="tablaAdminBody"></tbody>
+            <tfoot>
+              <tr><td colspan="6">Total general de envíos</td><td id="totalAdmin">0</td></tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="modalCotizador" class="modal oculto" onclick="cerrarModalFondo(event)">
+    <div class="modal-caja">
+      <button class="modal-cerrar" type="button" onclick="cerrarModalCotizador()">&times;</button>
+      <h3><i class="fa-solid fa-truck-fast"></i> Cotizador Rápido Lima</h3>
+      <p>Calcula la tarifa de envío por distrito y peso usando cuadros de diálogo.</p>
+      <br>
+      <button class="boton morado" type="button" onclick="cotizarEnvioPrompt()">Iniciar cotización</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="contenedor">
+      <p>&copy; 2026 Rayko Courier · Proyecto académico UTP</p>
+      <p><i class="fa-solid fa-phone"></i> (01) 600-0000 · <a href="mailto:atencion@raykocourier.pe">atencion@raykocourier.pe</a></p>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
