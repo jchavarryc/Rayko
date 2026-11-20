@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingresar | Rayko Courier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="contenedor">
+      <a class="logo" href="index.html"><i class="fa-solid fa-shield-halved"></i> Rayko Courier</a>
+      <button class="btn-hamburguesa" id="btnMenu" type="button" onclick="toggleMenu()" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav id="navPrincipal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="seguimiento.html">Seguimiento</a></li>
+          <li><a href="login.html" class="activo">Ingresar</a></li>
+          <li><button class="btn-tema" type="button" onclick="abrirModalCotizador()"><i class="fa-solid fa-calculator"></i> Cotizar</button></li>
+          <li><button class="btn-tema" id="btnTema" type="button" onclick="cambiarTema()"></button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="contenedor" style="max-width: 500px;">
+      <h1>Acceso al Sistema</h1>
+      <p>Ingresa con tu rol operativo de Rayko Courier.</p>
+      <br>
+      <form class="formulario" onsubmit="iniciarSesion(event)">
+        <fieldset>
+          <legend>Credenciales de personal</legend>
+          <div class="campo">
+            <label for="usuario">Usuario o correo</label>
+            <input type="text" id="usuario" placeholder="ej. despachador@rayko.pe" onchange="normalizarTexto(this)" required>
+          </div>
+          <div class="campo">
+            <label for="clave">Contraseña</label>
+            <input type="password" id="clave" placeholder="••••••••" required>
+          </div>
+          <div class="campo">
+            <label for="rol">Panel de destino</label>
+            <select id="rol">
+              <option value="despacho.html">Despachador (Almacén)</option>
+              <option value="reparto.html">Repartidor (Ruta)</option>
+              <option value="admin.html">Administrador General</option>
+            </select>
+          </div>
+          <button class="boton morado" type="submit" style="width: 100%;">Ingresar al panel</button>
+        </fieldset>
+      </form>
+    </div>
+  </main>
+
+  <div id="modalCotizador" class="modal oculto" onclick="cerrarModalFondo(event)">
+    <div class="modal-caja">
+      <button class="modal-cerrar" type="button" onclick="cerrarModalCotizador()">&times;</button>
+      <h3><i class="fa-solid fa-truck-fast"></i> Cotizador Rápido Lima</h3>
+      <p>Calcula la tarifa de envío por distrito y peso usando cuadros de diálogo.</p>
+      <br>
+      <button class="boton morado" type="button" onclick="cotizarEnvioPrompt()">Iniciar cotización</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="contenedor">
+      <p>&copy; 2026 Rayko Courier · Proyecto académico UTP</p>
+      <p><i class="fa-solid fa-phone"></i> (01) 600-0000 · <a href="mailto:atencion@raykocourier.pe">atencion@raykocourier.pe</a></p>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
